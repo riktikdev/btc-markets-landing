@@ -1,7 +1,13 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  reactStrictMode: true,
+  output: 'standalone',
+  trailingSlash: false,
+  skipTrailingSlashRedirect: true,
+  experimental: {
+    optimizePackageImports: ['tailwindcss'],
+  },
 };
 
 export default nextConfig;
